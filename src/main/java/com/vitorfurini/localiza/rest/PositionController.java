@@ -60,7 +60,7 @@ public class PositionController {
     @ApiOperation("Recurso disponível para buscar a posição de um veiculo pela placa")
     public ResponseEntity<Object> findByLicensePlate(@RequestParam String licensePlate) {
 
-        var response = positionService.findByLicesePlate(licensePlate);
+        var response = positionService.findByLicensePlate(licensePlate);
 
         return ResponseEntity.ok().body(response);
     }

@@ -61,7 +61,7 @@ public class PositionServiceImpl implements PositionService {
     }
 
     @Override
-    public List<Posicao> findByLicesePlate(String licensePlate) {
+    public List<Posicao> findByLicensePlate(String licensePlate) {
         var posicao = this.repository.findByLicensePlate(licensePlate);
 
         if (posicao.isEmpty()) {

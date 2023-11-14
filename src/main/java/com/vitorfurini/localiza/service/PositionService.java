@@ -14,5 +14,5 @@ public interface PositionService {
 
     Posicao saveNewPosition(PosicoesDto posicoesDto);
 
-    List<Posicao> findByLicesePlate(String licensePlate);
+    List<Posicao> findByLicensePlate(String licensePlate);
 }

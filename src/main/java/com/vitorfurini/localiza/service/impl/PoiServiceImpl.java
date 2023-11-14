@@ -48,7 +48,7 @@ public class PoiServiceImpl implements PoiService {
     @Transactional
     public Poi addPOI(PoiDto poidto) {
 
-        if (findByName(poidto.getName()).isEmpty()) {
+        if (!this.repository.findByNameIgnoreCase(poidto.getName()).isEmpty()) {
             throw new BusinessRulesException(
                     String.format("POI %s já cadastrado!", poidto.getName()));
         }
